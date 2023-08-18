@@ -489,6 +489,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbec771c1795bd6458b2310c86d5d6b7, type: 3}
+--- !u!1 &508714229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508714230}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &508714230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508714229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &596841118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7154769223905743671, guid: a0b4083b5609b9746a81cb9b09eda7f9,
@@ -692,7 +723,7 @@ GameObject:
   - component: {fileID: 1320004174}
   - component: {fileID: 1320004173}
   - component: {fileID: 1320004172}
-  - component: {fileID: 1320004171}
+  - component: {fileID: 1320004175}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -700,25 +731,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1320004171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320004170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1320004173}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: Distress
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 1320004173}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1320004172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +801,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1320004171}
+  mPreview: {fileID: 1320004175}
 --- !u!4 &1320004174
 Transform:
   m_ObjectHideFlags: 0
@@ -811,6 +823,25 @@ Transform:
   - {fileID: 1680055608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!114 &1320004175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320004170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1320004173}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Distress
+  mDatasetName: 
+  mCastedBehaviour: {fileID: 1320004173}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1423799480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,3 +1286,4 @@ SceneRoots:
   - {fileID: 1320004174}
   - {fileID: 194989742}
   - {fileID: 1735433617}
+  - {fileID: 508714230}
