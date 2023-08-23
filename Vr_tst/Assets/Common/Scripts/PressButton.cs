@@ -17,11 +17,12 @@ public class PressButton : MonoBehaviour
     public AudioClip CinematicHitSound;
     public AudioClip TitleHitSound;
     
-    private int pressCount = 0; // Variable para llevar el conteo de presiones
+    private int pressCount = 0; //Variable para llevar el conteo de presiones
 
     public GameObject FloatingStuff1;
     public GameObject FloatingStuff2;
     public GameObject FloatingStuff3;
+    public GameObject FloatingStuff4;
 
     public Canvas blackScreenCanvas;
     public RawImage ImageTitle;
@@ -78,7 +79,7 @@ public class PressButton : MonoBehaviour
         }
         else if (pressCount == 4)
         {
-
+            FloatingStuff4.SetActive(true);
         }
         else if (pressCount == 5)
         {
@@ -98,7 +99,6 @@ public class PressButton : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeImageActivation);
         ImageTitle.gameObject.SetActive(true);
 
-       
     }
 
     private IEnumerator RestorePosition()
