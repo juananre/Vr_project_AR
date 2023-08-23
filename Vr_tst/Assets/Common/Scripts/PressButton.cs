@@ -16,6 +16,9 @@ public class PressButton : MonoBehaviour
 
     private int pressCount = 0; // Variable para llevar el conteo de presiones
 
+    public GameObject FloatingStuff1;
+    public GameObject FloatingStuff2;
+
     private void Awake()
     {
         botonTransform = GetComponent<Transform>();
@@ -52,11 +55,13 @@ public class PressButton : MonoBehaviour
         if (pressCount == 1)
         {
             GetComponent<AudioSource>().PlayOneShot(suspenseSound);
+            FloatingStuff1.SetActive(true);
             
         }
         else if (pressCount == 2)
         {
             GetComponent<AudioSource>().PlayOneShot(horrorPianoSound);
+            FloatingStuff2.SetActive(true);
         }
         else if (pressCount == 3)
         {

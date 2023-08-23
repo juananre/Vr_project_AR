@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 362022404}
   - component: {fileID: 362022403}
   - component: {fileID: 362022407}
+  - component: {fileID: 362022408}
   m_Layer: 0
   m_Name: Push
   m_TagString: Untagged
@@ -855,6 +856,8 @@ MonoBehaviour:
   pressSound: {fileID: 8300000, guid: d11d857694337234db7c8fdddea8d2ac, type: 3}
   suspenseSound: {fileID: 8300000, guid: 9be4eb911f2f9a949890d9583a8bccd3, type: 3}
   horrorPianoSound: {fileID: 8300000, guid: 75f79a3afbf8e324b8b421ec711fd8dd, type: 3}
+  FloatingStuff1: {fileID: 1594156038}
+  FloatingStuff2: {fileID: 1658433771}
 --- !u!65 &362022404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -990,6 +993,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &362022408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362022398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4957f1f57ea8754eb97145bd6da0b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalLight: {fileID: 1497866235}
+  minIntensity: 0.8
+  maxIntensity: 2
+  intensityChangeRate: 0.4
 --- !u!1001 &476887671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2551,7 +2570,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2757,7 +2776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1594156039
 Transform:
   m_ObjectHideFlags: 0
@@ -2795,7 +2814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1658433772
 Transform:
   m_ObjectHideFlags: 0
