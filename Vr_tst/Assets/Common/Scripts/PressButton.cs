@@ -8,18 +8,21 @@ public class PressButton : MonoBehaviour
     private Renderer botonRenderer;
     private Color currentColor;
     private float colorChangeAmount = 0.5f; // Cantidad de cambio de color en cada clic
+    private AudioSource pressSFX;
 
     private void Awake()
     {
         botonTransform = GetComponent<Transform>();
         botonRenderer = GetComponent<Renderer>();
         currentColor = botonRenderer.material.color;
+        pressSFX = GetComponent<AudioSource>();
     }
 
     // ... Otros métodos del script ...
 
     private void OnMouseDown()
     {
+        pressSFX.Play();
         // Bajar el botón en el eje Y
         Vector3 newPosition = botonTransform.position - new Vector3(-0.1f, 0f, 0f); // Cambia el valor 0.1f según tus necesidades
         botonTransform.position = newPosition;
