@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class PressButton : MonoBehaviour
 {
+    [Header("Ferrer hizo esto")]
+    //cambie agregue unas cosas en IncrementPressCount()
+    [SerializeField] Image panelImage;
+
+
+    [Header("Isa hizo esto")]
+
     private Transform botonTransform;
     private Renderer botonRenderer;
     private Color currentColor;
@@ -35,8 +42,10 @@ public class PressButton : MonoBehaviour
         botonRenderer = GetComponent<Renderer>();
         currentColor = botonRenderer.material.color;
         pressSFX = GetComponent<AudioSource>();
+        
 
-       
+
+
     }
 
     private void OnMouseDown()
@@ -66,23 +75,41 @@ public class PressButton : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(suspenseSound);
             FloatingStuff1.SetActive(true);
-            
+
+            Color panelcolor = panelImage.color;
+            panelcolor.a = 0.2f;
+            panelImage.color = panelcolor;
         }
         else if (pressCount == 2)
         {
             GetComponent<AudioSource>().PlayOneShot(horrorPianoSound);
             FloatingStuff2.SetActive(true);
+
+            Color panelcolor = panelImage.color;
+            panelcolor.a = 0.3f;
+            panelImage.color = panelcolor;
         }
         else if (pressCount == 3)
         {
             FloatingStuff3.SetActive(true);
+
+            Color panelcolor = panelImage.color;
+            panelcolor.a = 0.4f;
+            panelImage.color = panelcolor;
         }
         else if (pressCount == 4)
         {
             FloatingStuff4.SetActive(true);
+            Color panelcolor = panelImage.color;
+            panelcolor.a = 0.5f;
+            panelImage.color = panelcolor;
         }
         else if (pressCount == 5)
         {
+            Color panelcolor = panelImage.color;
+            panelcolor.a = 0.6f;
+            panelImage.color = panelcolor;
+
             GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().PlayOneShot(TitleHitSound);
             GetComponent<AudioSource>().PlayOneShot(CinematicHitSound);
@@ -91,6 +118,7 @@ public class PressButton : MonoBehaviour
             FloatingStuff3.SetActive(false);
             FloatingStuff2.SetActive(false);
             FloatingStuff1.SetActive(false);
+
         }
     }
 
