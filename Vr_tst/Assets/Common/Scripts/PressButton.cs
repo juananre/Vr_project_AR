@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PressButton : MonoBehaviour
 {
@@ -12,12 +13,20 @@ public class PressButton : MonoBehaviour
 
     public AudioClip pressSound; //Sonido de alarma, cada vez que se presiona
     public AudioClip suspenseSound; 
-    public AudioClip horrorPianoSound; 
-
+    public AudioClip horrorPianoSound;
+    public AudioClip CinematicHitSound;
+    public AudioClip TitleHitSound;
+    
     private int pressCount = 0; // Variable para llevar el conteo de presiones
 
     public GameObject FloatingStuff1;
     public GameObject FloatingStuff2;
+    public GameObject FloatingStuff3;
+
+    public Canvas blackScreenCanvas;
+    public RawImage ImageTitle;
+    public float delayBeforeImageActivation = 2.0f;
+    public float delayBeforeSoundActivation = 1.0f;
 
     private void Awake()
     {
@@ -50,7 +59,7 @@ public class PressButton : MonoBehaviour
     private void IncrementPressCount()
     {
         pressCount++; // Incrementar el conteo de presiones
-        Debug.Log("Presionado " + pressCount + " veces.");
+        
 
         if (pressCount == 1)
         {
@@ -65,9 +74,31 @@ public class PressButton : MonoBehaviour
         }
         else if (pressCount == 3)
         {
-            // Acción específica para la tercera vez
-            Debug.Log("Acción de la tercera vez.");
+            FloatingStuff3.SetActive(true);
         }
+        else if (pressCount == 4)
+        {
+
+        }
+        else if (pressCount == 5)
+        {
+            GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().PlayOneShot(TitleHitSound);
+            GetComponent<AudioSource>().PlayOneShot(CinematicHitSound);
+            StartCoroutine(ActivateDelay());
+            blackScreenCanvas.gameObject.SetActive(true);
+            FloatingStuff3.SetActive(false);
+            FloatingStuff2.SetActive(false);
+            FloatingStuff1.SetActive(false);
+        }
+    }
+
+    private IEnumerator ActivateDelay()
+    {
+        yield return new WaitForSeconds(delayBeforeImageActivation);
+        ImageTitle.gameObject.SetActive(true);
+
+       
     }
 
     private IEnumerator RestorePosition()
