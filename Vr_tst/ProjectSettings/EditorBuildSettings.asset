@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Distress2.unity
-    guid: 08604a888b09b56409faccdbf5679eb4
+    path: Assets/Scenes/Distress.unity
+    guid: f6cfde1816293184eb0c91d81d5934ca
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 0c8dade342f74da4680a6115fc3267be,
       type: 2}
