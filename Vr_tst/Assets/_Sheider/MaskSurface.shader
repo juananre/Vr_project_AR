@@ -8,9 +8,10 @@ Shader "Unlit/MaskSurface"
     {
         Tags { "RenderType"="Opaque" }
         LOD 100
-         Stencil
-         {
+        Stencil
+        {
            ref 1
+
            comp always
            pass replace
            
