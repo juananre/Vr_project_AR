@@ -13,6 +13,7 @@ Shader "Unlit/MaskSurface"
            ref 1
            comp always
            pass replace
+           
 
         }
 
