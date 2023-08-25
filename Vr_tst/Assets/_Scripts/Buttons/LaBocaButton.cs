@@ -15,11 +15,12 @@ public class LaBocaButton : MonoBehaviour
         GrupoBocas.SetActive(true);
         Enunciado.SetActive(true);
         GrupoFinal.SetActive(true);
+        GrupoOjosss.SetActive(true);
 
 
         //Desactivar
         LaBoca.SetActive(false);
-        GrupoOjosss.SetActive(false);
+        
         
     }
 }

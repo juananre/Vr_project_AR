@@ -11727,8 +11727,8 @@ MonoBehaviour:
   LaBoca: {fileID: 1725582343}
   GrupoBocas: {fileID: 214967112}
   GrupoOjosss: {fileID: 1040903781}
-  Enunciado: {fileID: 0}
-  GrupoFinal: {fileID: 766220327}
+  Enunciado: {fileID: 766220327}
+  GrupoFinal: {fileID: 1885294247}
 --- !u!1 &1735256807
 GameObject:
   m_ObjectHideFlags: 0
