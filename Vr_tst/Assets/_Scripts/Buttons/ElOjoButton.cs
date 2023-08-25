@@ -9,8 +9,11 @@ public class ElOjoButton : MonoBehaviour
     public GameObject Hueco2;
     private void OnMouseDown()
     {
-        ElOjo.SetActive(false);
+        //Activar
         GrupoOjos.SetActive(true);
         Hueco2.SetActive(true);
+
+        //Desactivar
+        ElOjo.SetActive(false);
     }
 }
